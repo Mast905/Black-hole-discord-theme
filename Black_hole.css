@@ -1,0 +1,159 @@
+/**
+ * @name BlackHole
+ * @author Custom
+ * @version 1.0
+ * @description Black hole themed Discord theme based on ClearVision V7
+ */
+
+@import url("https://clearvision.github.io/ClearVision-v7/main.css");
+@import url("https://clearvision.github.io/ClearVision-v7/betterdiscord.css");
+
+:root {
+  --main-color: #ffffff;
+  --hover-color: #cccccc;
+  --success-color: #43b581;
+  --danger-color: #982929;
+  --online-color: #43b581;
+  --idle-color: #faa61a;
+  --dnd-color: #982929;
+  --streaming-color: #593695;
+  --offline-color: #808080;
+  --background-shading-percent: 100%;
+  --background-image: url(https://i.imgur.com/lNFdYQk.jpeg);
+  --background-position: center;
+  --background-size: cover;
+  --background-attachment: fixed;
+  --background-filter: saturate(calc(var(--saturation-factor, 1) * 1));
+  --user-popout-image: url(https://i.imgur.com/lNFdYQk.jpeg);
+  --user-popout-position: center;
+  --user-popout-size: cover;
+  --user-popout-attachment: fixed;
+  --user-popout-filter: saturate(calc(var(--saturation-factor, 1) * 1));
+  --user-modal-image: url(https://i.imgur.com/lNFdYQk.jpeg);
+  --user-modal-position: center;
+  --user-modal-size: cover;
+  --user-modal-attachment: fixed;
+  --user-modal-filter: saturate(calc(var(--saturation-factor, 1) * 1));
+  --home-icon: url(https://clearvision.github.io/icons/discord.svg);
+  --home-size: cover;
+  --main-font: "gg sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --code-font: Consolas, "gg mono", "Liberation Mono", Menlo, Courier, monospace;
+  --channel-normal: var(--interactive-text-default);
+  --channel-muted: var(--interactive-muted);
+  --channel-hover: var(--interactive-text-hover);
+  --channel-selected: var(--interactive-text-active);
+  --channel-selected-bg: rgba(255, 255, 255, 0.1);
+  --channel-unread: var(--main-color);
+  --channel-unread-hover: var(--hover-color);
+  --focus-color: var(--main-color);
+}
+
+:is(.theme-dark, .theme-light .theme-dark) {
+  --background-shading: rgba(0, 0, 0, 0.4);
+  --card-shading: rgba(0, 0, 0, 0.2);
+  --popout-shading: rgba(0, 0, 0, 0.3);
+  --modal-shading: rgba(0, 0, 0, 0.3);
+  --input-shading: rgba(255, 255, 255, 0.05);
+  --normal-text: #d8d8db;
+  --muted-text: #aeaeb4;
+}
+
+:is(.theme-darker, .theme-light .theme-darker) {
+  --background-shading: rgba(0, 0, 0, 0.5);
+  --card-shading: rgba(0, 0, 0, 0.3);
+  --popout-shading: rgba(0, 0, 0, 0.4);
+  --modal-shading: rgba(0, 0, 0, 0.4);
+  --input-shading: rgba(255, 255, 255, 0.05);
+  --normal-text: #fbfbfb;
+  --muted-text: #94949c;
+}
+
+/* ==================== BADGES ==================== */
+[class*="numberBadge"],
+[class*="badge"],
+[class*="lowerBadge"] {
+  background-color: #ed4245 !important;
+  color: #ffffff !important;
+}
+
+/* ==================== BUTTONS ==================== */
+button,
+[class*="button"],
+[role="button"] {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+button:hover,
+[class*="button"]:hover,
+[role="button"]:hover {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+}
+
+button:active,
+[class*="button"]:active,
+[role="button"]:active {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  color: #ffffff !important;
+}
+
+/* ==================== INPUTS & SUCHE ==================== */
+input,
+textarea,
+[class*="input"],
+[class*="search"],
+[class*="searchBar"] {
+  background-color: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+}
+
+/* ==================== EINGABEFELD ==================== */
+[class*="channelTextArea"],
+[class*="textArea"],
+[class*="inner"],
+[class*="scrollableContainer"] {
+  background-color: transparent !important;
+}
+
+/* ==================== KANÄLE & HOVER ==================== */
+[class*="containerDefault"],
+[class*="link"] {
+  background-color: transparent !important;
+  color: #ffffff !important;
+}
+
+[class*="containerDefault"]:hover,
+[class*="link"]:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+[class*="modeSelected"],
+[class*="selectedChannel"],
+[class*="selected"] {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+}
+
+/* ==================== VIDEO / CALL ==================== */
+[class*="videoWrapper"],
+[class*="tile"],
+[class*="tileGrid"],
+[class*="callContainer"],
+[class*="participant"],
+[class*="userTile"],
+[class*="focusRing"],
+[class*="content"],
+[class*="drag-previewer"] {
+  background-color: transparent !important;
+}
+/* Schrift grau */
+[class*="username"],
+[class*="name"],
+[class*="subtext"],
+[class*="activity"],
+[class*="status"] {
+  color: #aaaaaa !important;
+}
